@@ -1,11 +1,19 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './Home.css'
 import { useLoaderData } from 'react-router-dom';
 import JobList from '../JobList/JobList'
+import FeaturedJobs from '../FeaturedJobs/FeaturedJobs';
 
 
 const Home = () => {
-    const jobLists = useLoaderData();
+    const [jobLists, setJobLists] = useState([]);
+    const featuredJobs = useLoaderData();
+
+    useEffect(() => {
+        fetch('/public/job-category-list.json')
+            .then(res => res.json())
+            .then(data => setJobLists(data))
+    })
 
     return (
         <div>
@@ -16,19 +24,34 @@ const Home = () => {
                     <button>Get Started</button>
                 </div>
                 <div>
-                <img src="/src/Components/Home/P3OLGJ1 copy 1.png"/>
+                    <img src="/src/Components/Home/P3OLGJ1 copy 1.png" />
                 </div>
             </section>
             <section className='home-section-2'>
-                <h2>Job Category List</h2>
-                <p>Explore thousands of job opportunities with all the information you need. Its your future</p>
-                <div className='joblists'>
-                    {
-                        jobLists.map(jobList => <JobList
-                        key={jobList.id}
-                        jobList={jobList}></JobList>  )
-                    }
+                <div>
+                    <h2>Job Category List</h2>
+                    <p>Explore thousands of job opportunities with all the information you need. Its your future</p>
+                    <div className='joblists'>
+                        {
+                            jobLists.map(jobList => <JobList
+                                key={jobList.id}
+                                jobList={jobList}></JobList>)
+                        }
+                    </div>
                 </div>
+                <h2>Featured Jobs</h2>
+                <p>Explore thousands of job opportunities with all the information you need. Its your future</p>
+            </section>
+            <section>
+               
+                    <div  className='home-section-3'>
+                        {
+                            featuredJobs.map(featuredJob => <FeaturedJobs
+                                key={featuredJob.id}
+                                featuredJob={featuredJob}></FeaturedJobs>)
+                        }
+                    </div>
+
             </section>
         </div>
     );

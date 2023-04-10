@@ -28,3 +28,8 @@
     display: flex;
     gap: 30px;
 }
+.home-section-3{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap:20px
+}
