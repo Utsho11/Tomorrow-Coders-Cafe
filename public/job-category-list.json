@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "image": "/src/assets/Icons/chip 1.png",
+    "job_type": "Software Engineer",
+    "job_availability": 100
+  },
+  {
+    "id": 2,
+    "image": "/src/assets/Icons/accounts 1.png",
+    "job_type": "Marketing Manager",
+    "job_availability": 120
+  },
+  {
+    "id": 3,
+    "image": "/src/assets/Icons/social-media 1.png",
+    "job_type": "Graphic Designer",
+    "job_availability": 110
+  },
+  {
+    "id": 4,
+    "image": "/src/assets/Icons/business 1.png",
+    "job_type": "Data Analyst",
+    "job_availability": 100
+  }
+]
