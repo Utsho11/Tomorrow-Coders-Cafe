@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import './FeaturedJobDetail.css'
 import { useLoaderData, useParams } from 'react-router-dom';
-import { addToDb, getApplyingJob } from '../../../public/utilities/fakedb';
+import { addToDb } from '../../../public/utilities/fakedb';
 
 const FeaturedJobDetail = () => {
     const jobs = useLoaderData();
     const { id } = useParams();
 
     const [data, setData] = useState({});
-
 
     useEffect(() => {
         if (jobs) {
@@ -17,7 +16,9 @@ const FeaturedJobDetail = () => {
         }
     }, [])
 
-
+    const handleAddToApplyJob = (id) =>{
+        addToDb(id)
+    }
     return (
         <div className='FeaturedJob'>
             <img className='bannerImage1' src="../../../src/Components/FeaturedJobDetail/img/Vector-1.png" alt="" />
@@ -61,7 +62,7 @@ const FeaturedJobDetail = () => {
                         <p><b>Address :</b> {data.address}</p>
                         </div>
                     </div>
-                    <button onClick={() => handleAddToApplyJobs(data)}>Apply Now</button>
+                    <button onClick={() => handleAddToApplyJob(id)}>Apply Now</button>
                 </div>
             </div>
         </div>
