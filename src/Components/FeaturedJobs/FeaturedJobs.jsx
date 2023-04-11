@@ -1,9 +1,9 @@
 import React from 'react';
 import './FeaturedJobs.css'
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 
 const FeaturedJobs = ({ featuredJob }) => {
-    const { id, image, company_name, job_title, work_time, job_type, salary, address } = featuredJob;
+    const { id, image, company_name, job_title, work_time, job_type, salary, address} = featuredJob;
     return (
         <div className='featuredJob-container'>
             <div className='featuredJob'>
@@ -20,7 +20,7 @@ const FeaturedJobs = ({ featuredJob }) => {
                 <img src="/src/Components/FeaturedJobs/Frame.png" alt="" />
                 <p>{salary}</p>
                 </div>
-                <button>View Detail</button>
+                <button><Link to={`/featuredJobs/${id}`}>View Detail</Link></button>
             </div>
         </div>
     );

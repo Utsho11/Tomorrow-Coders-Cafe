@@ -3,6 +3,9 @@
     border-radius: 8px;
     padding: 10px 20px;
 }
+.featuredJob a{
+    text-decoration: none;
+}
 .featuredJob h4{
     margin: 3px;
 }
