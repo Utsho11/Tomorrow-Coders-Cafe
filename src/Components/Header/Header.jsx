@@ -1,6 +1,7 @@
 import React from 'react';
 import './Header.css'
 import { Link } from 'react-router-dom';
+import ActiveLink from '../ActiveLink/ActiveLink';
 
 const Header = () => {
     return (
@@ -11,10 +12,10 @@ const Header = () => {
             </div>
 
             <div>
-                <Link to='/'>Home</Link>
-                <Link to='/statistics' >Statistics</Link>
-                <Link to='/applied-jobs' >Applied Jobs </Link>
-                <Link to='/blog' >Blog </Link>
+                <ActiveLink to='/'>Home</ActiveLink>
+                <ActiveLink to='/statistics' >Statistics</ActiveLink>
+                <ActiveLink to='/applied-jobs' >Applied Jobs </ActiveLink>
+                <ActiveLink to='/blog' >Blog </ActiveLink>
             </div>
             
             <div>
