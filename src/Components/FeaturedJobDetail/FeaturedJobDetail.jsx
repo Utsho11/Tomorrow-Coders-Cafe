@@ -62,7 +62,7 @@ const FeaturedJobDetail = () => {
                         <p><b>Address :</b> {data.address}</p>
                         </div>
                     </div>
-                    <button onClick={() => handleAddToApplyJob(id)}>Apply Now</button>
+                    <button onClick={() => handleAddToApplyJob(data.id)}>Apply Now</button>
                 </div>
             </div>
         </div>

@@ -1,6 +1,5 @@
 const addToDb = id => {
     let ApplyingJob = {};
-    console.log(id);
     
     const storeApplyJob = localStorage.getItem('Applying-Job');
 
@@ -20,8 +19,18 @@ const addToDb = id => {
     localStorage.setItem('Applying-Job',JSON.stringify(ApplyingJob));
 }
 
+const getStoredData = () =>{
+    let ApplyingJob = {};
+    
+    const storeApplyJob = localStorage.getItem('Applying-Job');
 
+    if(storeApplyJob){
+        ApplyingJob = JSON.parse(storeApplyJob)
+    }
+    return ApplyingJob;
+}
 
 export {
-    addToDb  
+    addToDb,
+    getStoredData
 }
