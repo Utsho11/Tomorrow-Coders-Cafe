@@ -14,6 +14,7 @@ import Home from './Components/Home/Home';
 import FeaturedJobs from './Components/FeaturedJobs/FeaturedJobs';
 import FeaturedJobDetail from './Components/FeaturedJobDetail/FeaturedJobDetail';
 import { getJobData } from './Loaders/getJobData';
+import Error from './Components/Error/Error';
 
 const router = createBrowserRouter([
   {
@@ -42,6 +43,10 @@ const router = createBrowserRouter([
       {
         path:"/blog",
         element: <Blog></Blog>
+      },
+      {
+        path: "*",
+        element: <Error></Error>,
       }
     ]
   },
