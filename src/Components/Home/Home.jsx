@@ -16,7 +16,7 @@ const Home = () => {
     })
 
     return (
-        <div>
+        <div className='home'>
             <section className='home-section-1'>
                 <div>
                     <h1>One Step <br /> Closer To Your <br /> <span className='text-color'>Dream Job</span></h1>

@@ -9,8 +9,9 @@ const addToDb = id => {
 
     const quantity = ApplyingJob[id]
     if(quantity){
-        const newQuantity = quantity + 1;
-        ApplyingJob[id] = newQuantity;
+        // const newQuantity = quantity + 1;
+        // ApplyingJob[id] = newQuantity;
+        alert("Already applied")
     }
     else{
         ApplyingJob[id] = 1;
