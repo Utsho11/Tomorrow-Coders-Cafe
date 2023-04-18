@@ -1,0 +1,26 @@
+.joblist {
+    border-radius: 8px;
+    background-color: #b9c1f397;
+    width: 240px;
+    height: 150px;
+    padding: 10px 10px;
+}
+.joblist-img{
+    background-color: #9ea9f097;
+    height: 65px;
+    width: 65px;
+    align-items: center;
+    border-radius: 8px;
+    margin-top: 10px;
+    margin-left: 15px;
+}
+.joblist-img img{
+    margin: 10px;
+}
+.joblist h4{
+    margin: 15px 0 0 15px;
+}
+.joblist p{
+    text-align: start;
+    margin: 5px 0 0 15px;
+}
