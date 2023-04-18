@@ -12,5 +12,5 @@ b7a9-career-hub-Utsho11 created by GitHub Classroom
 - statics
 
 ## 🔗 Live Links
-website: (https://tiny-bienenstitch-32916c.netlify.app)
+website: (https://zippy-dolphin-f14a2a.netlify.app/)
 
